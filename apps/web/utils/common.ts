@@ -1,0 +1,12 @@
+/* 
+  psy21d 
+  Apche 2.0 licensed
+*/
+import { BigNumber } from "bignumber.js";
+
+export type Numberish = string | number | bigint | BigNumber;
+export type NumberFormatter = (val: Numberish) => string;
+
+export function bn(val: Numberish): BigNumber {
+  return new BigNumber(val.toString());
+}
